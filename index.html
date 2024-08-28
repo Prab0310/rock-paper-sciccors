@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors Game</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #72d2f2 10%, #5151E5 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        .buttons {
+            margin: 20px 0;
+        }
+
+        .btn {
+            color: #080808;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        .btn:active {
+            transform: scale(1);
+        }
+
+        .rock {
+            background-color: #FF6F61;
+        }
+
+        .paper {
+            background-color: #6B8E23;
+        }
+
+        .scissors {
+            background-color: #1E90FF;
+        }
+        .reset {
+         background-color: #717070; /* Gray color for reset */
+        }
+
+        .result-container {
+            margin-top: 20px;
+        }
+
+        #result {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        #score {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rock, Paper, Scissors</h1>
+        <p>Choose your move:</p>
+        <div class="buttons">
+            <button onclick="playGame('rock')" class="btn rock">✊ Rock</button>
+            <button onclick="playGame('paper')" class="btn paper">✋ Paper</button>
+            <button onclick="playGame('scissors')" class="btn scissors">✌ Scissors</button>
+            <button onclick="resetGame()" class="btn reset">🔄 Reset</button>
+        </div>
+        <div class="result-container">
+            <h2 id="result"></h2>
+            <p id="score"></p>
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
+
